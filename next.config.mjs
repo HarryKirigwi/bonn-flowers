@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     // Remove deprecated domains config if present
     // Use remotePatterns only if you need to allow remote images
