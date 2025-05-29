@@ -1,15 +1,15 @@
 'use client'
-import { AuthContextProvider } from '@/context/AuthContext';
+import { AuthProvider } from '@/context/AuthContext';
 import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 export default function LoginPage() {
   return (
-    <AuthContextProvider>
+    <AuthProvider>
       <Suspense fallback={<div>Loading...</div>}>
         <LoginForm />
       </Suspense>
-    </AuthContextProvider>
+    </AuthProvider>
   );
 }
 
