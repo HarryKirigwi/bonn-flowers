@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import * as THREE from 'three';
+import Image from 'next/image';
 
 // 3D Background Component (from the provided code)
 const FloatingPetals3D = () => {
@@ -143,22 +144,22 @@ const FloatingPetals3D = () => {
 
 const farmImages = [
   {
-    src: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&h=600&fit=crop",
+    src: "/images/farm/farmpicture1.jpg",
     alt: "Thuo Farm flower cultivation fields in Nakuru",
     caption: "Our expansive flower fields at Thuo Farm"
   },
   {
-    src: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop",
-    alt: "Fresh carnations growing at Thuo Farm",
-    caption: "Premium carnations ready for harvest"
+    src: "images/farm/farmphoto2.jpg",
+    alt: "Fresh delphiniums growing at Thuo Farm",
+    caption: "Premium delphiniums ready for harvest"
   },
   {
-    src: "https://images.unsplash.com/photo-1574684891174-df6b02ab38d7?w=800&h=600&fit=crop",
-    alt: "Delphinium flowers at House of Bonn farm",
-    caption: "Beautiful delphiniums in full bloom"
+    src: "images/farm/farmphoto3.jpg",
+    alt: "Delphinium hydrengeas at House of Bonn farm",
+    caption: "Beautiful hydrengeas in full bloom"
   },
   {
-    src: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    src: "images/farm/aboutheroimage.jpg",
     alt: "Greenhouse operations at Thuo Farm Nakuru",
     caption: "Climate-controlled greenhouse facilities"
   }
@@ -353,10 +354,13 @@ export default function AboutPage() {
                   className="relative"
                 >
                   <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                    <img
-                      src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=800&fit=crop"
+                    <Image
+                      src="/images/farm/bonnflowerslogo.jpg"
                       alt="House of Bonn flower shop interior"
                       className="w-full h-96 lg:h-[500px] object-cover"
+                      width={1200}
+                      height={500}
+                      priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                   </div>
