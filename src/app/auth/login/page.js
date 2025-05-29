@@ -1,19 +1,25 @@
 'use client'
 import { AuthContextProvider } from '@/context/AuthContext';
 import { Suspense } from 'react';
-import dynamic from 'next/dynamic';
+import { useSearchParams } from 'next/navigation';
 
-// Dynamic import to prevent SSR issues with useSearchParams
-const LoginPage = dynamic(() => import('./LoginPage'), {
-  ssr: false
-});
-
-export default function LoginPageWrapper() {
+export default function LoginPage() {
   return (
     <AuthContextProvider>
       <Suspense fallback={<div>Loading...</div>}>
-        <LoginPage />
+        <LoginForm />
       </Suspense>
     </AuthContextProvider>
+  );
+}
+
+function LoginForm() {
+  const searchParams = useSearchParams();
+  // ...existing login form logic goes here...
+  return (
+    <div>
+      {/* Your login form UI, using searchParams as needed */}
+      Login form goes here
+    </div>
   );
 }
