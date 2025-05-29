@@ -100,7 +100,7 @@ const FloatingPetals3D = () => {
   
   const config = useMemo(() => ({
     petalCount: isLowEnd ? 8 : isMobile ? 12 : 20,
-    pixelRatio: Math.min(window.devicePixelRatio, 2),
+    pixelRatio: typeof window !== 'undefined' ? Math.min(window.devicePixelRatio, 2) : 1,
     animationSpeed: isLowEnd ? 0.5 : 1
   }), [isLowEnd, isMobile]);
 
