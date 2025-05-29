@@ -458,7 +458,7 @@ const FlowerCollection = () => {
               whileTap={{ scale: 0.98 }}
               onClick={() => addToCart(product, 1)}
               className="p-2 bg-green-500 text-white rounded-lg cursor-pointer"
-              disabled={!product.inStock}
+              disabled={true} // Disabled for now
               aria-label="Add to Cart"
             >
               <ShoppingCart size={16} />
@@ -680,7 +680,7 @@ const FlowerCollection = () => {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => addToCart(product, 1)}
-                      disabled={!product.inStock}
+                      disabled={true}
                       className="flex-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-xl font-medium transition-all hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                     >
                       <ShoppingCart size={20} />
